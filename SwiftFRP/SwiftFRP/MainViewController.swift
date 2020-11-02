@@ -46,29 +46,13 @@ class MainViewController: UIViewController {
 		view.backgroundColor = .white
 		addViews()
 		setConstraints()
-		emailTextField
-			///‘rx’: We access the RxSwift ‘rx’ property that gives us the extension object of the text field
-			.rx
-			///‘text’: We access ‘text’ on top of ‘rx’, which gives us the Reactive property of the text
-			.text
-			///‘orEmpty’: We need to call this since it converts the optional reactive ‘String?’ property to ‘String’, basically unwrapping it
-			.orEmpty
-			///‘bind(to:)’: As we saw earlier, passing any object to this method binds it to the property, so here we bind the emailTextField’s text property to the viewModel’s ‘email’ observable.
-			.bind(to: viewModel.email)
-			///‘disposed’: Finally, we attach the disposeBag object for cleaning it up.
-			.disposed(by: disposeBag)
-		
-		passwordTextField
-			.rx
-			.text
-			.orEmpty
-			.bind(to: viewModel.password)
-			.disposed(by: disposeBag)
-		
-		///‘map’: From our Functional Programming blog <<link to blog>>, we used ‘map’ to transform objects from one type to another. Here, we use it on viewModel’s ‘isValid’ Boolean Observable to transform it into a boolean. Basically, ’map’ transforms Observable to Bool type, which is then bound to the loginButton’s ‘isEnabled’ property which is then responsible for enabling or disabling the button.
-		viewModel.isValid.map{ $0 }
-			.bind(to: loginButton.rx.isEnabled)
-			.disposed(by: disposeBag)
+		let email = emailTextField.rx.text.orEmpty.asObservable()
+		let password = passwordTextField.rx.text.orEmpty.asObservable()
+		Observable.combineLatest(email, password) { (email, password) in
+			return email.isValidEmail() && password.isValidPassword()
+		}
+		.bind(to: loginButton.rx.isEnabled)
+		.disposed(by: disposeBag)
 	}
 	
 	@objc func handleLoginButton() {

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,7 +12,9 @@
 		784AA79B254D0F4E009128DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 784AA79A254D0F4E009128DB /* Assets.xcassets */; };
 		784AA79E254D0F4E009128DB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 784AA79D254D0F4E009128DB /* Preview Assets.xcassets */; };
 		784AA7A1254D0F4E009128DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 784AA79F254D0F4E009128DB /* LaunchScreen.storyboard */; };
-		784AA7AB254D1FE4009128DB /* MainViewController().swift in Sources */ = {isa = PBXBuildFile; fileRef = 784AA7AA254D1FE4009128DB /* MainViewController().swift */; };
+		784AA7B8254F9AA3009128DB /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784AA7B7254F9AA3009128DB /* TestViewController.swift */; };
+		784AA7C2254F9B5A009128DB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784AA7C1254F9B5A009128DB /* MainViewController.swift */; };
+		784AA7C5254FA03C009128DB /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784AA7C4254FA03C009128DB /* LoginViewModel.swift */; };
 		91D91407172FB1A76287EB59 /* Pods_SwiftFRP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF25C95E87D1F431A51D1E5C /* Pods_SwiftFRP.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +27,9 @@
 		784AA79D254D0F4E009128DB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		784AA7A0254D0F4E009128DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		784AA7A2254D0F4E009128DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		784AA7AA254D1FE4009128DB /* MainViewController().swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController().swift"; sourceTree = "<group>"; };
+		784AA7B7254F9AA3009128DB /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		784AA7C1254F9B5A009128DB /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		784AA7C4254FA03C009128DB /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		CF25C95E87D1F431A51D1E5C /* Pods_SwiftFRP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftFRP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA07646B1F06B50CB5DE2A16 /* Pods-SwiftFRP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftFRP.debug.xcconfig"; path = "Target Support Files/Pods-SwiftFRP/Pods-SwiftFRP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,7 +52,6 @@
 				FA07646B1F06B50CB5DE2A16 /* Pods-SwiftFRP.debug.xcconfig */,
 				3C7C7318246D1FC41E612546 /* Pods-SwiftFRP.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -75,7 +78,9 @@
 			children = (
 				784AA794254D0F4D009128DB /* AppDelegate.swift */,
 				784AA796254D0F4D009128DB /* SceneDelegate.swift */,
-				784AA7AA254D1FE4009128DB /* MainViewController().swift */,
+				784AA7C1254F9B5A009128DB /* MainViewController.swift */,
+				784AA7C4254FA03C009128DB /* LoginViewModel.swift */,
+				784AA7B7254F9AA3009128DB /* TestViewController.swift */,
 				784AA79A254D0F4E009128DB /* Assets.xcassets */,
 				784AA79F254D0F4E009128DB /* LaunchScreen.storyboard */,
 				784AA7A2254D0F4E009128DB /* Info.plist */,
@@ -216,7 +221,9 @@
 			files = (
 				784AA795254D0F4D009128DB /* AppDelegate.swift in Sources */,
 				784AA797254D0F4D009128DB /* SceneDelegate.swift in Sources */,
-				784AA7AB254D1FE4009128DB /* MainViewController().swift in Sources */,
+				784AA7B8254F9AA3009128DB /* TestViewController.swift in Sources */,
+				784AA7C5254FA03C009128DB /* LoginViewModel.swift in Sources */,
+				784AA7C2254F9B5A009128DB /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

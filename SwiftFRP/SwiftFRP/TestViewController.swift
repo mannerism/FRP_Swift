@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class MainViewController: UIViewController {
+class TestViewController: UIViewController {
 	let disposeBag = DisposeBag()
 
 	override func viewDidLoad() {
